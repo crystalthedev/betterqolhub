@@ -1,0 +1,109 @@
+[
+  {
+    "id": "better-shop",
+    "name": "Better Shop",
+    "type": "coin shop",
+    "verified": true,
+    "owner": "Diego",
+    "established": "2024-06-01",
+    "discord_server_id": "1378662119196856370",
+    "discord_icon_hash": "23390c36e39196bfc230f585684b59ae",
+    "avatar": "https://cdn.discordapp.com/icons/1378662119196856370/23390c36e39196bfc230f585684b59ae.webp?size=4096",
+    "description": "Premium Skyblock marketplace offering high-quality accounts and profiles. Trusted by the community.",
+    "services": ["Accounts", "Profiles", "MFAs", "Middleman Service"],
+    "pricing": {
+      "Premium Accounts": "fair pricing",
+      "Profile Boosting": "fair pricing",
+      "MFAs": "$8",
+      "Middleman Service": "5% commission"
+    },
+    "features": [
+      "Verified Quality",
+      "Secure Transactions",
+      "Fast Delivery",
+      "Competitive Pricing"
+    ],
+    "discord": "https://discord.gg/PJWAYHuWKF",
+    "website": null
+  },
+  {
+    "id": "krzysiuconfig",
+    "name": "KrzYSiu Config",
+    "type": "Config Shop",
+    "verified": true,
+    "owner": "KrzYSiu",
+    "established": "2024-04-01",
+    "discord_server_id": "1226813730013184060",
+    "discord_icon_hash": "7be6b5d6fb1bf5c625b6c245443e14d5",
+    "avatar": "https://cdn.discordapp.com/icons/1226813730013184060/7be6b5d6fb1bf5c625b6c245443e14d5.webp?size=1024",
+    "description": "Reputable Skyblock trading platform specializing in accounts, profiles, configs, exchanges and more.",
+    "services": ["Accounts", "Profiles", "Middleman Service", "cofl configs"],
+    "pricing": {
+      "Accounts": "market pricing",
+      "Profiles": "competitive rates",
+      "cofl configs": "premium quality",
+      "Middleman Service": "fair commission"
+    },
+    "features": [
+      "Professional configs",
+      "Secure trading",
+      "Experienced team",
+      "Fast processing"
+    ],
+    "discord": "https://discord.gg/krzysiuconfig",
+    "website": null
+  },
+  {
+    "id": "interesting-market",
+    "name": "Interesting Market",
+    "type": "Coin Shop",
+    "verified": true,
+    "owner": "Market Team",
+    "established": "2025-03-01",
+    "discord_server_id": "1370593100988289094",
+    "discord_icon_hash": "0ff8b633b6d0ea2cf30eb55b92073e74",
+    "avatar": "https://cdn.discordapp.com/icons/1370593100988289094/0ff8b633b6d0ea2cf30eb55b92073e74.webp?size=128",
+    "description": "Reliable marketplace for Skyblock accounts, profiles, and coins with competitive pricing.",
+    "services": ["Accounts", "Profiles", "MFAs", "Coins"],
+    "pricing": {
+      "Accounts": "competitive",
+      "Profiles": "fair prices",
+      "MFAs": "affordable",
+      "Coins": "best rates"
+    },
+    "features": [
+      "Competitive pricing",
+      "Reliable service",
+      "Quick delivery",
+      "Safe transactions"
+    ],
+    "discord": "https://discord.gg/interestingmarket",
+    "website": null
+  },
+  {
+    "id": "febshop",
+    "name": "FebShop",
+    "type": "Coin Shop",
+    "verified": true,
+    "owner": "FebShop Team",
+    "established": "2025-05-01",
+    "discord_server_id": "1378101563616395435",
+    "discord_icon_hash": "ee070ec8f85b0902f0fcb8c4db171c14",
+    "avatar": "https://cdn.discordapp.com/icons/1378101563616395435/ee070ec8f85b0902f0fcb8c4db171c14.webp?size=128",
+    "description": "Trusted Skyblock trading service focusing on accounts, profiles, and coin transactions.",
+    "services": ["Accounts", "Profiles", "Coins"],
+    "pricing": {
+      "Accounts": "fair pricing",
+      "Profiles": "market rates",
+      "Coins": "competitive"
+    },
+    "features": [
+      "Trusted service",
+      "Fast transactions",
+      "Quality accounts",
+      "Secure platform"
+    ],
+    "discord": "https://discord.gg/febshop",
+    "website": null
+  }
+]

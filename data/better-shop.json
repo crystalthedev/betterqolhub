@@ -1,0 +1,71 @@
+[
+  {
+    "id": "premium-accounts",
+    "icon": "👤",
+    "title": "Premium Accounts",
+    "description": "High-level Skyblock accounts with established profiles and significant progress",
+    "price": "Very reasonable prices",
+    "features": [
+      "Verified authenticity",
+      "High skill levels",
+      "Good networth",
+      "Safe transfer process"
+    ]
+  },
+  {
+    "id": "good-profiles",
+    "icon": "📊",
+    "title": "Good Profiles",
+    "description": "Professional profiles tailored to your specific needs and playstyle",
+    "price": "Very reasonable prices",
+    "features": [
+      "Custom configurations",
+      "Optimized stats",
+      "Time-saving setups",
+      "Expert guidance"
+    ]
+  },
+  {
+    "id": "mfa-services",
+    "icon": "🔒",
+    "title": "MFA Services",
+    "description": "Fresh Minecraft accounts without progress. Perfect for secondary accounts",
+    "price": "MFAs for cheap when in stock",
+    "features": [
+      "Full access",
+      "Email included",
+      "Instant delivery",
+      "Secure purchase"
+    ]
+  },
+  {
+    "id": "middleman",
+    "icon": "🛡️",
+    "title": "Middleman Service",
+    "description": "Secure transaction mediation for high-value trades",
+    "price": "5% commission",
+    "features": [
+      "Trusted mediator",
+      "Safe escrow",
+      "Fast processing",
+      "Dispute resolution"
+    ]
+  },
+  {
+    "id": "express-delivery",
+    "icon": "⚡",
+    "title": "Express Delivery",
+    "description": "Priority processing for urgent orders",
+    "price": "Free fast delivery",
+    "features": []
+  },
+  {
+    "id": "trusted-partner",
+    "icon": "💰",
+    "title": "Trusted Partner",
+    "description": "Highly reputed through partnership with Better QOLHub",
+    "price": "Community verified",
+    "features": []
+  }
+]
+

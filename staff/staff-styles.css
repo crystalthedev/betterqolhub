@@ -1,0 +1,198 @@
+/* Staff Page Styles */
+
+.staff-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.staff-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.staff-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-text-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.staff-header p {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+}
+
+#staffGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 1.5rem;
+}
+
+.staff-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(40px) saturate(180%) brightness(1.05);
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.05);
+    border: 0.5px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        0 8px 32px rgba(0, 0, 0, 0.02),
+        inset 0 0.5px 0 rgba(255, 255, 255, 0.5);
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 48px rgba(0, 0, 0, 0.04),
+        inset 0 0.5px 0 rgba(255, 255, 255, 0.6);
+}
+
+.staff-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.staff-role {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin: 0.25rem 0 0 0;
+}
+
+.staff-joined {
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+    margin: 0.25rem 0 0 0;
+}
+
+.staff-description {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 1.25rem 0;
+}
+
+.staff-specialties {
+    margin-bottom: 1.25rem;
+}
+
+.staff-specialties h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.specialty-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.specialty-tag {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    background: linear-gradient(135deg, rgba(94, 92, 230, 0.1), rgba(74, 74, 203, 0.1));
+    color: #5e5ce6;
+    border: 0.5px solid rgba(94, 92, 230, 0.2);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.staff-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 0.5px solid var(--glass-border);
+}
+
+.staff-link {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--glass-bg-strong);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(40px) saturate(180%) brightness(1.05);
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.05);
+    border: 0.5px solid var(--glass-border);
+    box-shadow: 
+        0 0.5px 1px rgba(0, 0, 0, 0.06),
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.02),
+        inset 0 0.5px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.staff-link:hover {
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.08),
+        0 4px 8px rgba(0, 0, 0, 0.06),
+        0 12px 24px rgba(0, 0, 0, 0.04),
+        inset 0 0.5px 0 rgba(255, 255, 255, 0.7),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.staff-link:active {
+    transform: scale(0.98);
+}
+
+.staff-link.discord-copy {
+    position: relative;
+}
+
+.staff-link.discord-copy.copied::after {
+    content: 'Copied!';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-success);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    #staffGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .staff-header h1 {
+        font-size: 2rem;
+    }
+}
+

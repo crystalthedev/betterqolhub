@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Pizza Client",
+    "type": "Cheat Client",
+    "version": ["1.8.9"],
+    "price": ["Free", "$15"],
+    "features": ["F7/M7", "Dojo", "Dungeons", "Slayer", "Miscellaneous"],
+    "discord server id": "1316904259161161788",
+    "discord icon hash": "d1f476fef1fa9306ed6fc2d5cb33c517",
+    "website link": "https://pizzaclient.net",
+    "discord link": "https://discord.gg/DSKpBfpwkz"
+  },
+  {
+    "name": "Oringo",
+    "type": "Cheat Client",
+    "version": ["1.8.9"],
+    "price": ["$20"],
+    "features": ["F7/M7", "Dojo", "Dungeons", "Rift", "Slayer", "Harp", "Miscellaneous"],
+    "discord server id": "1316835358444486748",
+    "discord icon hash": "eb9bdb9d3104abbbe3d8a71819bf9f57",
+    "discord link": "https://discord.gg/9UN7DSNY5y"
+  },
+  {
+    "name": "FunnyMapExtras",
+    "type": "Cheat Client",
+    "version": ["1.8.9"],
+    "price": ["Free"],
+    "features": ["F7/M7", "Dungeons"],
+    "discord server id": "967033809537204254",
+    "discord icon hash": "03c0ce1fa9300388d0c9ab3389893eea",
+    "discord link": "https://discord.gg/v7ueNqNtsk"
+  },
+  {
+    "name": "Odin Client",
+    "type": "Cheat Client",
+    "version": ["1.8.9", "1.21.5"],
+    "price": ["Free"],
+    "features": ["F7/M7", "Dungeons", "Nether", "Harp", "Miscellaneous"],
+    "discord server id": "1041616706327552000",
+    "discord icon hash": "0b27206249da82e5e6965207262a34fa",
+    "github link": "https://github.com/odtheking/Odin",
+    "discord link": "https://discord.gg/odin-1041616706327552000"
+  },
+  {
+    "name": "CatgirlAddons",
+    "type": "Cheat Client",
+    "version": ["1.8.9"],
+    "price": ["Free"],
+    "features": ["F7/M7", "Dungeons"],
+    "discord server id": "1371490329508839455",
+    "discord icon hash": "2ba55367fac2e29a6978553a79a52fc1",
+    "github link": "https://github.com/WompWatr/CatgirlAddons"
+  },
+  {
+    "name": "SkyShop™ V3",
+    "type": "Coin Shop",
+    "services": ["Accounts", "Coins", "Middleman"],
+    "discord server id": "1374400121394954322",
+    "discord icon hash": "16a374abf58d6995d74b0181c29a1652",
+    "discord link": "https://discord.gg/ekXWTZSWMY"
+  },
+  {
+    "name": "Skyblock Shop V2",
+    "type": "Coin Shop",
+    "services": ["Accounts", "Profiles", "Coins", "Middleman", "Exchange"],
+    "discord server id": "1376568687619735552",
+    "discord icon hash": "dea3d56a585aa3af8db979564d9ad361",
+    "discord link": "https://discord.gg/qQUbHkYcCy"
+  },
+  {
+    "name": "Clumpy Shop",
+    "type": "Coin Shop",
+    "services": ["Accounts", "Profiles", "MFAs", "Coins", "Middleman"],
+    "discord server id": "1397641010812682314",
+    "discord icon hash": "be16d2bf3374b0f721099488fb67a501",
+    "website link": "https://clumpyshop.com",
+    "discord link": "https://discord.gg/Ty9HhSFs8E"
+  },
+  {
+    "name": "Interesting Market",
+    "type": "Coin Shop",
+    "services": ["Accounts", "Profiles", "MFAs", "Coins"],
+    "discord server id": "1370593100988289094",
+    "discord icon hash": "0ff8b633b6d0ea2cf30eb55b92073e74",
+    "discord link": "https://discord.gg/sacqbP75bR"
+  },
+  {
+    "name": "FebShop",
+    "type": "Coin Shop",
+    "services": ["Accounts", "Profiles", "Coins"],
+    "discord server id": "1378101563616395435",
+    "discord icon hash": "ee070ec8f85b0902f0fcb8c4db171c14",
+    "discord link": "https://discord.gg/VEdXSwBnub"
+  },
+  {
+    "name": "KrzYSiu Config",
+    "type": "config shop",
+    "services": ["Accounts", "Profiles", "Middleman", "cofl configs"],
+    "discord server id": "1226813730013184060",
+    "discord icon hash": "7be6b5d6fb1bf5c625b6c245443e14d5",
+    "discord link": "https://discord.gg/3MPEeCSWfw"
+  },
+  {
+    "name": "NotEnoughUpdates",
+    "type": "Legit Client",
+    "version": ["1.8.9"],
+    "price": ["Free"],
+    "discord server id": "516977525906341928",
+    "discord icon hash": "e3d9feca7fed1c930d6201ba04b7e9e8",
+    "github link": "https://github.com/NotEnoughUpdates/NotEnoughUpdates/releases/tag/2.6.0",
+    "discord link": "https://discord.gg/moulberry"
+  },
+  {
+    "name": "SkyHanni",
+    "type": "Legit Client",
+    "version": ["1.8.9", "1.21.5"],
+    "price": ["Free"],
+    "discord server id": "997079228510117908",
+    "discord icon hash": "b5beeeece1d291c173a54540c4eef26f",
+    "github link": "https://github.com/hannibal002/SkyHanni",
+    "discord link": "https://discord.gg/EQqwxxrtnu"
+  },
+  {
+    "name": "Skytils",
+    "type": "Legit Client",
+    "version": ["1.8.9", "1.21.5"],
+    "price": ["Free"],
+    "discord server id": "807302538558308352",
+    "discord icon hash": "3fb9efb115e1f842faeb3dbf2b01203e",
+    "github link": "https://github.com/Skytils/SkytilsMod",
+    "discord link": "https://discord.gg/6ywR9zYrg5"
+  },
+  {
+    "name": "ChatTriggers",
+    "type": "Legit Client",
+    "version": ["1.8.9"],
+    "price": ["Free"],
+    "discord server id": "119493402902528000",
+    "discord icon hash": "a_3fba95b2142612070a027db04a9e7a6a",
+    "website link": "https://www.chattriggers.com/",
+    "discord link": "https://discord.gg/CCFDmnUbqt"
+  },
+  {
+    "name": "Secret Routes Mod",
+    "type": "Legit Client",
+    "version": ["1.8.9"],
+    "price": ["Free"],
+    "discord server id": "1111306530357256262",
+    "discord icon hash": "5369d3ceaadd3944aaefc157b8995c52",
+    "github link": "https://github.com/yourboykyle/SecretRoutes",
+    "discord link": "https://discord.gg/secretroutes"
+  },
+  {
+    "name": "Polar Client",
+    "type": "Macro Client",
+    "version": ["1.8.9"],
+    "price": ["$30", "$40"],
+    "macros": ["Mining"],
+    "discord server id": "1139134033071194174",
+    "discord icon hash": "3ef6ef99a0bec7d2de2ae5394330be60",
+    "website link": "https://docs.polarclient.lol/polar/",
+    "discord link": "https://discord.gg/polar"
+  },
+  {
+    "name": "Taunahi",
+    "type": "Macro Client",
+    "version": ["1.8.9"],
+    "price": ["$20", "$35"],
+    "macros": ["Farming", "Fishing", "Foraging", "Slayer"],
+    "discord server id": "871537438227570748",
+    "discord icon hash": "e342fc72155ed8e24e5c2c3227d93bce",
+    "website link": "https://taunahi.net",
+    "discord link": "https://discord.gg/48XyUqSSPG"
+  },
+  {
+    "name": "JellyLab",
+    "type": "Macro Client",
+    "version": ["1.8.9"],
+    "price": ["Free"],
+    "macros": ["Farming", "Mining"],
+    "discord server id": "997464259170680923",
+    "discord icon hash": "172576c1bc81800c3785b80341990b78",
+    "github link": "https://github.com/JellyLabScripts",
+    "discord link": "https://discord.gg/gCd43hGjCZ"
+  },
+  {
+    "name": "ThePerfectMacro",
+    "type": "Macro Client",
+    "version": ["1.8.9"],
+    "price": ["Free", "$24"],
+    "macros": ["AH/BZ"],
+    "discord server id": "1261825756615540836",
+    "discord icon hash": "983ecb82e285eee55ef25dd2bfbe9d4d",
+    "github link": "https://github.com/IcyHenryT/TPM-rewrite",
+    "discord link": "https://discord.gg/7fWQ3zcvh8"
+  },
+  {
+    "name": "Binmaster",
+    "type": "Macro Client",
+    "version": ["1.8.9"],
+    "price": ["$30"],
+    "macros": ["Slayer", "AH/BZ"],
+    "discord server id": "966113525539934218",
+    "discord icon hash": "bc9cec2181bd609f649580af2b6f9cb0",
+    "website link": "https://www.binmaster.pro",
+    "discord link": "https://discord.gg/4bY2W5q8RM"
+  },
+  {
+    "name": "Polinex",
+    "type": "Macro Client",
+    "version": ["1.8.9"],
+    "price": ["$20", "$30"],
+    "macros": ["Mining"],
+    "discord server id": "1286611281972822046",
+    "discord icon hash": "c3c0ea40068dc12d7a8ff4bf18ef92da",
+    "website link": "https://polinexclient.lol/",
+    "discord link": "https://discord.gg/yZwQpqX4Ve"
+  },
+  {
+    "name": "SkyblockY",
+    "type": "ct plugins",
+    "version": ["1.8.9"],
+    "services": ["F7/M7", "Dungeons", "Miscellaneous"],
+    "discord server id": "1180667916560109588",
+    "discord icon hash": "d711c564e313d730fd8cdd3558bccf4b",
+    "discord link": "https://discord.gg/gpxZTCkkpz"
+  },
+  {
+    "name": "HyList",
+    "type": "scammer list",
+    "services": ["ratter list", "scammer list"],
+    "discord server id": "1336012854582579230",
+    "discord icon hash": "f54dfc107ce2c04dc24797986e8e2cbb",
+    "website link": "https://hylist.xyz/",
+    "discord link": "https://discord.gg/GD8mXmUCrw"
+  }
+]

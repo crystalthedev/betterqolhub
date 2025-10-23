@@ -1,0 +1,92 @@
+/* Better Shop Styles */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(40px) saturate(180%) brightness(1.05);
+    -webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.05);
+    border: 0.5px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        0 8px 32px rgba(0, 0, 0, 0.02),
+        inset 0 0.5px 0 rgba(255, 255, 255, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 16px 48px rgba(0, 0, 0, 0.04),
+        inset 0 0.5px 0 rgba(255, 255, 255, 0.6);
+    border-color: var(--color-accent);
+}
+
+.service-card[data-has-details="true"]:hover {
+    cursor: pointer;
+}
+
+.service-icon {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    user-select: none;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0 0 0.75rem 0;
+}
+
+.service-description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.service-price {
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 122, 255, 0.1);
+    color: var(--color-accent);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(0, 122, 255, 0.2);
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-icon {
+        font-size: 2.5rem;
+    }
+    
+    .service-title {
+        font-size: 1.25rem;
+    }
+}
+

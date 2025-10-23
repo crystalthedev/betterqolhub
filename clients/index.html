@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients & More - Better QOLHub</title>
+    <meta name="description" content="Browse vetted Skyblock clients and quality-of-life mods">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="clients-styles.css">
+    <link rel="stylesheet" href="client-btn-styles.css">
+</head>
+<body>
+    <!-- Advanced Animated Background -->
+    <div class="ios-background"></div>
+
+    <!-- Modern Navigation -->
+    <nav class="ios-navbar" id="navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-logo">
+                <img src="../favicon.ico" alt="Better QOLHub">
+                <span>Better QOLHub</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/clients" class="navbar-link active">Clients</a></li>
+                <li><a href="/partners" class="navbar-link">Partners</a></li>
+                <li><a href="/better-shop" class="navbar-link">Shop</a></li>
+                <li><a href="/staff" class="navbar-link">Staff</a></li>
+                <li>
+                    <a href="https://discord.gg/E56QxrW9Jt" target="_blank" class="navbar-link" style="gap: 0.4rem;">
+                        <img src="../discord-icon.ico" alt="Discord" style="width: 18px; height: 18px;">
+                        Discord
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="clients-hero">
+        <div class="hero-content">
+            <span class="section-badge">Curated Collection</span>
+            <h1 class="section-title" style="margin-top: 1rem;">Clients & More</h1>
+            <p class="section-subtitle" style="margin-bottom: 2rem;">
+                All the best mods in one place, thoroughly vetted and verified
+            </p>
+            
+            <!-- Discord Widget -->
+            <div class="discord-compact">
+                <img class="discord-icon" 
+                     src="https://cdn.discordapp.com/icons/1346908926855221372/ae827aaa688f7a6253ec80ca37282768.webp?size=64" 
+                     alt="Better QOLHub Discord" 
+                     onerror="this.style.display='none'">
+                <div class="discord-info">
+                    <div class="discord-name">Better QOLHub</div>
+                    <div class="discord-members"><span id="onlineCount">...</span> online</div>
+                </div>
+                <a href="https://discord.gg/E56QxrW9Jt" target="_blank" class="ios-button ios-button-primary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+                    Join
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="clients-main-section">
+        <div class="clients-wrapper">
+            <!-- Filters Panel -->
+            <aside class="filters-panel">
+                <div class="filters-header">
+                    <h2>Filters</h2>
+                    <button class="filter-reset" id="resetFilters">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                            <path d="M21 3v5h-5"/>
+                            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                            <path d="M3 21v-5h5"/>
+                        </svg>
+                        Reset
+                    </button>
+                </div>
+
+                <!-- Search -->
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        Search
+                    </label>
+                    <input type="text" 
+                           class="filter-input" 
+                           placeholder="Search clients..." 
+                           id="searchInput">
+                </div>
+
+                <!-- Sort -->
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m3 16 4 4 4-4M7 20V4m14 4-4-4-4 4m4-4v16"/>
+                        </svg>
+                        Sort by
+                    </label>
+                    <select class="filter-input" id="sortSelect">
+                        <option value="type">Type</option>
+                        <option value="name">Name (A-Z)</option>
+                        <option value="version">Version</option>
+                    </select>
+                </div>
+
+                <!-- Type -->
+                <div class="filter-group">
+                    <label class="filter-label">Type</label>
+                    <div class="filter-chips" id="typeFilters">
+                        <button class="filter-chip active" data-filter="all">All</button>
+                        <button class="filter-chip" data-filter="cheat">Cheat</button>
+                        <button class="filter-chip" data-filter="macro">Macro</button>
+                        <button class="filter-chip" data-filter="legit">Legit</button>
+                        <button class="filter-chip" data-filter="shop">Shop</button>
+                        <button class="filter-chip" data-filter="other">Other</button>
+                    </div>
+                </div>
+
+                <!-- Version -->
+                <div class="filter-group">
+                    <label class="filter-label">Version</label>
+                    <div class="filter-chips" id="versionFilters">
+                        <button class="filter-chip active" data-filter="all">All</button>
+                        <button class="filter-chip" data-filter="1.8.9">1.8.9</button>
+                        <button class="filter-chip" data-filter="1.21.5">1.21.5</button>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="filter-group">
+                    <label class="filter-label">Price</label>
+                    <div class="filter-chips" id="priceFilters">
+                        <button class="filter-chip active" data-filter="all">All</button>
+                        <button class="filter-chip" data-filter="free">Free</button>
+                        <button class="filter-chip" data-filter="paid">Paid</button>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="filter-group">
+                    <label class="filter-label">Features</label>
+                    <div class="filter-chips" id="featuresFilters">
+                        <button class="filter-chip" data-filter="f7m7">F7/M7</button>
+                        <button class="filter-chip" data-filter="dungeons">Dungeons</button>
+                        <button class="filter-chip" data-filter="dojo">Dojo</button>
+                        <button class="filter-chip" data-filter="rift">Rift</button>
+                        <button class="filter-chip" data-filter="nether">Nether</button>
+                        <button class="filter-chip" data-filter="slayer">Slayer</button>
+                        <button class="filter-chip" data-filter="harp">Harp</button>
+                        <button class="filter-chip" data-filter="miscellaneous">Misc</button>
+                    </div>
+                </div>
+
+                <!-- Macros -->
+                <div class="filter-group">
+                    <label class="filter-label">Macros</label>
+                    <div class="filter-chips" id="macrosFilters">
+                        <button class="filter-chip" data-filter="farming">Farming</button>
+                        <button class="filter-chip" data-filter="mining">Mining</button>
+                        <button class="filter-chip" data-filter="fishing">Fishing</button>
+                        <button class="filter-chip" data-filter="foraging">Foraging</button>
+                        <button class="filter-chip" data-filter="slayer">Slayer</button>
+                        <button class="filter-chip" data-filter="ahbz">AH/BZ</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Clients Grid -->
+            <div class="clients-content">
+                <div class="clients-toolbar">
+                    <div class="info-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                        <span>Some links may be outdated - verify before downloading</span>
+                    </div>
+                    <div class="results-info">
+                        <span id="resultsCount">Loading...</span>
+                    </div>
+                </div>
+
+                <div class="clients-grid" id="clientsGrid">
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Loading clients...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="ios-footer">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p class="footer-text" style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                Better QOLHub
+            </p>
+            <p class="footer-text">
+                © 2025 Better QOLHub. Built with ❤️ for the Skyblock community.
+            </p>
+            <p class="footer-text" style="margin-top: 0.5rem; opacity: 0.7;">
+                Open source, transparent, and always improving.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="clients-script.js"></script>
+</body>
+</html>

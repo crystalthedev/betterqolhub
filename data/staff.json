@@ -1,0 +1,30 @@
+[
+  {
+    "id": "diego",
+    "name": "Diego",
+    "role": "Owner",
+    "joinDate": "2025-03-01",
+    "discord_user_id": "696706677180989467",
+    "discord_avatar_hash": "99cb62605a8ca141dfb2384e9718f259",
+    "avatar": "https://cdn.discordapp.com/avatars/696706677180989467/99cb62605a8ca141dfb2384e9718f259.webp?size=1024",
+    "description": "Likes quality of life and doesn't like dirty ratters",
+    "specialties": ["Quality of Life", "Open Source", "Community Management"],
+    "discord": "lfdiego",
+    "github": "https://github.com/lfdiego",
+    "website": null
+  },
+  {
+    "id": "guruofthemoon",
+    "name": "GuruoftheMoon",
+    "role": "Owner",
+    "joinDate": "2025-03-01",
+    "discord_user_id": "822013633076264990",
+    "discord_avatar_hash": "507263b9f21b41e4ca7c310427f07e3e",
+    "avatar": "https://cdn.discordapp.com/avatars/822013633076264990/507263b9f21b41e4ca7c310427f07e3e.webp?size=1024",
+    "description": "Fag who likes being wiped and doesn't like dirty ratters",
+    "specialties": ["Community Building", "Content Moderation"],
+    "discord": "guruofthemoon",
+    "github": null,
+    "website": null
+  }
+]

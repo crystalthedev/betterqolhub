@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners - Better QOLHub</title>
+    <meta name="description" content="Our trusted partners and collaborators">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .partner-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--glass-shadow-strong);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .partner-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--glass-border);
+            margin-bottom: var(--spacing-md);
+            transition: transform var(--transition-bounce);
+        }
+
+        .partner-card:hover .partner-logo {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .partner-badge {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            background: rgba(52, 199, 89, 0.1);
+            border: 1px solid rgba(52, 199, 89, 0.3);
+            border-radius: var(--radius-full);
+            color: var(--color-success);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .partner-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-primary);
+        }
+
+        .partner-desc {
+            font-size: 1rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+            flex-grow: 1;
+        }
+
+        .loading-container {
+            text-align: center;
+            padding: var(--spacing-3xl);
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto var(--spacing-md);
+            border: 3px solid var(--glass-border);
+            border-top-color: var(--color-accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ios-background"></div>
+
+    <nav class="ios-navbar" id="navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-logo">
+                <img src="../favicon.ico" alt="Better QOLHub">
+                <span>Better QOLHub</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/clients" class="navbar-link">Clients</a></li>
+                <li><a href="/partners" class="navbar-link active">Partners</a></li>
+                <li><a href="/better-shop" class="navbar-link">Shop</a></li>
+                <li><a href="/staff" class="navbar-link">Staff</a></li>
+                <li>
+                    <a href="https://discord.gg/E56QxrW9Jt" target="_blank" class="navbar-link" style="gap: 0.4rem;">
+                        <img src="../discord-icon.ico" alt="Discord" style="width: 18px; height: 18px;">
+                        Discord
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="ios-hero">
+        <div class="hero-content">
+            <span class="section-badge">Trusted Collaborators</span>
+            <h1 class="section-title" style="margin-top: 1rem;">Our Partners</h1>
+            <p class="section-subtitle">
+                Working together to build a better Skyblock community
+            </p>
+            <p class="hero-description">
+                Meet our trusted partners who share our vision of transparency, quality, and community-driven development.
+            </p>
+        </div>
+    </section>
+
+    <section class="ios-section">
+        <div id="partnersGrid"></div>
+    </section>
+
+    <section class="ios-section">
+        <div class="bento-item bento-full" style="background: var(--gradient-primary); border: none; text-align: center; padding: 4rem 2rem; color: white;">
+            <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: white;">Become a Partner</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Interested in partnering with Better QOLHub? Join us in making the Skyblock community better for everyone.
+            </p>
+            <a href="https://discord.gg/E56QxrW9Jt" target="_blank" class="ios-button" style="background: white; color: var(--color-accent); box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+                </svg>
+                <span>Contact Us on Discord</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Partner Modal -->
+    <div id="partnerModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: 10000; align-items: center; justify-content: center; padding: 2rem;">
+        <div style="position: relative; max-width: 600px; width: 100%; max-height: 90vh; overflow-y: auto; background: var(--color-bg-secondary); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);">
+            <button onclick="closePartnerModal()" style="position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); color: var(--color-text-primary); font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+                ✕
+            </button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer class="ios-footer">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p class="footer-text" style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Better QOLHub</p>
+            <p class="footer-text">© 2025 Better QOLHub. Built with ❤️ for the Skyblock community.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="partners-styles.css">
+    <script src="partners-script.js"></script>
+</body>
+</html>

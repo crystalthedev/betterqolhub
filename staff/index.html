@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff - Better QOLHub</title>
+    <meta name="description" content="Meet the team behind Better QOLHub">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .staff-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .staff-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--glass-shadow-strong);
+            border-color: rgba(102, 126, 234, 0.4);
+        }
+
+        .staff-card:hover::before {
+            opacity: 1;
+        }
+
+        .staff-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--glass-border);
+            margin-bottom: var(--spacing-md);
+            transition: transform var(--transition-bounce);
+        }
+
+        .staff-card:hover .staff-avatar {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .staff-role {
+            display: inline-block;
+            padding: 0.35rem 0.9rem;
+            background: var(--color-surface);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .staff-role.owner {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            border-color: transparent;
+        }
+
+        .staff-role.admin {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            border-color: transparent;
+        }
+
+        .staff-role.moderator {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            color: white;
+            border-color: transparent;
+        }
+
+        .staff-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-primary);
+        }
+
+        .staff-bio {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+
+        .staff-links {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .staff-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--color-surface);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-sm);
+            color: var(--color-text-secondary);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .staff-link:hover {
+            background: var(--gradient-primary);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .loading-container {
+            text-align: center;
+            padding: var(--spacing-3xl);
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto var(--spacing-md);
+            border: 3px solid var(--glass-border);
+            border-top-color: var(--color-accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ios-background"></div>
+
+    <nav class="ios-navbar" id="navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-logo">
+                <img src="../favicon.ico" alt="Better QOLHub">
+                <span>Better QOLHub</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/clients" class="navbar-link">Clients</a></li>
+                <li><a href="/partners" class="navbar-link">Partners</a></li>
+                <li><a href="/better-shop" class="navbar-link">Shop</a></li>
+                <li><a href="/staff" class="navbar-link active">Staff</a></li>
+                <li>
+                    <a href="https://discord.gg/E56QxrW9Jt" target="_blank" class="navbar-link" style="gap: 0.4rem;">
+                        <img src="../discord-icon.ico" alt="Discord" style="width: 18px; height: 18px;">
+                        Discord
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="ios-hero">
+        <div class="hero-content">
+            <span class="section-badge">Meet the Team</span>
+            <h1 class="section-title" style="margin-top: 1rem;">Our Staff</h1>
+            <p class="section-subtitle">
+                The dedicated team keeping Better QOLHub running
+            </p>
+            <p class="hero-description">
+                Our passionate team of moderators and administrators work tirelessly to ensure Better QOLHub remains a safe, helpful, and welcoming place for the Skyblock community.
+            </p>
+        </div>
+    </section>
+
+    <section class="ios-section">
+        <div id="staffGrid"></div>
+    </section>
+
+    <footer class="ios-footer">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p class="footer-text" style="font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem;">Better QOLHub</p>
+            <p class="footer-text">© 2025 Better QOLHub. Built with ❤️ for the Skyblock community.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="staff-styles.css">
+    <script src="staff-script.js"></script>
+</body>
+</html>
