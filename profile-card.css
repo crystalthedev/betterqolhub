@@ -1,0 +1,113 @@
+/* Shared profile card styles for user landing pages (/diego, /guruofthemoon) */
+
+:root{
+  --profile-card-max: 860px;
+}
+
+.profile-page{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+.profile-card{
+  width: 100%;
+  max-width: var(--profile-card-max);
+  background: rgba(15,15,20,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(8px);
+}
+
+.profile-header{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar{
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.12);
+}
+
+.profile-title{
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.profile-bio{
+  margin-top: 8px;
+  color: rgba(255,255,255,0.75);
+}
+
+.divider{
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 22px 0 16px;
+}
+
+.server-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.server-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.server-icon{
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  object-fit: contain;
+}
+
+.server-meta{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+.online-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34c759;
+  box-shadow: 0 0 10px rgba(52,199,89,0.65);
+}
+
+.join-btn{
+  appearance: none;
+  text-decoration: none;
+  background: #5865F2;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 6px 16px rgba(88,101,242,0.35);
+}
+
+.join-btn:hover{ transform: translateY(-1px); }
+.join-btn:active{ transform: translateY(0); }
+
+@media (max-width: 520px){
+  .profile-title{ font-size: 26px; }
+  .profile-avatar{ width: 72px; height: 72px; }
+}
+
+

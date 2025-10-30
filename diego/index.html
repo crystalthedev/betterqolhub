@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego — Better QOLHub</title>
+    <link rel="icon" href="../discord-icon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../profile-card.css">
+</head>
+<body>
+    <main class="profile-page">
+        <section class="profile-card">
+            <div class="profile-header">
+                <img class="profile-avatar" src="https://cdn.discordapp.com/avatars/0/0.webp?size=128" alt="Diego avatar">
+                <div>
+                    <h1 class="profile-title">Diego</h1>
+                    <p class="profile-bio">be honest, am I tuff?</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="server-row">
+                <div class="server-left">
+                    <img class="server-icon" src="https://cdn.discordapp.com/icons/1346908926855221372/ae827aaa688f7a6253ec80ca37282768.webp?size=64" alt="Better QOLHub Discord">
+                    <div class="server-meta">
+                        <strong>better QOLHUB</strong>
+                        <span class="online-dot"></span>
+                        <span>245 Online</span>
+                    </div>
+                </div>
+                <a class="join-btn" href="https://discord.gg/E56QxrW9Jt" target="_blank" rel="noopener noreferrer">JOIN</a>
+            </div>
+        </section>
+    </main>
+    <script src="../script.js"></script>
+    <script>
+    // Optionally, set avatar from query (?avatar=url)
+    (function(){
+      try{
+        const params=new URLSearchParams(location.search);
+        const avatar=params.get('avatar');
+        if(avatar){ document.querySelector('.profile-avatar').src=avatar; }
+      }catch(e){}
+    })();
+    </script>
+  </body>
+</html>
+
+
