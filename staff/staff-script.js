@@ -1,9 +1,5 @@
-// Staff Page Script
-
 let staffData = [];
 let copiedUsername = null;
-
-// Fetch staff data
 async function loadStaff() {
     try {
         const response = await fetch('../data/staff.json');
@@ -29,7 +25,6 @@ function createStaffCard(member) {
         month: 'long'
     });
     
-    // Make GuruoftheMoon 1.3x bigger
     const avatarSize = member.id === 'guruofthemoon' ? '83px' : '64px';
     
     return `
@@ -94,7 +89,6 @@ async function copyDiscord(username) {
         showCopyFeedback(username);
     } catch (error) {
         console.error('Failed to copy:', error);
-        // Fallback
         const textarea = document.createElement('textarea');
         textarea.value = username;
         document.body.appendChild(textarea);
@@ -108,7 +102,7 @@ async function copyDiscord(username) {
 function showCopyFeedback(username) {
     copiedUsername = username;
     
-    // Find the button and show feedback
+    
     const buttons = document.querySelectorAll('.discord-copy');
     buttons.forEach(btn => {
         if (btn.textContent.includes(username)) {
@@ -121,6 +115,5 @@ function showCopyFeedback(username) {
     });
 }
 
-// Initialize on page load
 loadStaff();
 

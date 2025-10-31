@@ -1,9 +1,5 @@
-// Partners Page Script
-
 let partnersData = [];
 let currentPartner = null;
-
-// Fetch partners data
 async function loadPartners() {
     try {
         const response = await fetch('../data/partners.json');
@@ -22,10 +18,9 @@ function displayPartners() {
     
     grid.innerHTML = partnersData.map(partner => createPartnerCard(partner)).join('');
     
-    // Add click handlers
+    
     document.querySelectorAll('.partner-card').forEach(card => {
         card.addEventListener('click', (e) => {
-            // Don't open modal if clicking a link
             if (e.target.closest('a')) return;
             
             const partnerId = card.dataset.partnerId;
@@ -167,10 +162,8 @@ function createPartnerCard(partner) {
     `;
 }
 
-// Initialize on page load
 loadPartners();
 
-// Close modal on ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closePartnerModal();
 });

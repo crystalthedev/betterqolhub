@@ -1,26 +1,19 @@
-// Clients Page Script
-
-// Load client data from JSON file
 let clientsData = [];
 
-// Fetch clients data
 async function loadClients() {
     try {
         const response = await fetch('../data/clients.json');
         if (response.ok) {
             const data = await response.json();
-            // Transform data format
             clientsData = data.map(client => ({
                 name: client.name,
                 type: client.type,
                 versions: client.version || [],
                 features: client.features?.map(f => {
-                    // Normalize feature names
                     const normalized = f.toLowerCase().replace(/\//g, '').replace(/\s+/g, '');
                     return normalized;
                 }) || [],
                 macros: client.macros?.map(m => {
-                    // Normalize macro names
                     const normalized = m.toLowerCase().replace(/\//g, '').replace(/\s+/g, '');
                     return normalized;
                 }) || [],
@@ -53,29 +46,24 @@ let currentFilters = {
     macros: []
 };
 
-// Filter and render clients
 function applyFilters() {
     renderClients();
     updateResultsCount();
 }
 
-// Initialize filter event listeners
 function initializeFilters() {
-    // Search input
     const searchInput = document.getElementById('searchInput');
     searchInput.addEventListener('input', (e) => {
         currentFilters.search = e.target.value.toLowerCase();
         applyFilters();
     });
 
-    // Sort select
     const sortSelect = document.getElementById('sortSelect');
     sortSelect.addEventListener('change', (e) => {
         currentFilters.sort = e.target.value;
         applyFilters();
     });
 
-    // Filter buttons
     setupFilterButtons('typeFilters', (value) => {
         currentFilters.type = value;
         applyFilters();
@@ -94,7 +82,6 @@ function initializeFilters() {
     setupMultiFilterButtons('featuresFilters', currentFilters.features);
     setupMultiFilterButtons('macrosFilters', currentFilters.macros);
 
-    // Reset button
     document.getElementById('resetFilters').addEventListener('click', resetFilters);
 }
 
@@ -163,14 +150,12 @@ function resetFilters() {
 
 function applyFilters() {
     filteredClients = clientsData.filter(client => {
-        // Search filter
         if (currentFilters.search && 
             !client.name.toLowerCase().includes(currentFilters.search) &&
             !client.type.toLowerCase().includes(currentFilters.search)) {
             return false;
         }
         
-        // Type filter
         if (currentFilters.type !== 'all') {
             const typeMap = {
                 'cheat': 'Cheat Client',
@@ -189,14 +174,12 @@ function applyFilters() {
             }
         }
         
-        // Version filter
         if (currentFilters.version !== 'all') {
             if (!client.versions.includes(currentFilters.version)) {
                 return false;
             }
         }
         
-        // Price filter
         if (currentFilters.price !== 'all') {
             const priceCheck = currentFilters.price === 'free' ? 
                 client.prices.some(p => p.toLowerCase() === 'free') :
@@ -206,7 +189,6 @@ function applyFilters() {
             }
         }
         
-        // Features filter (OR logic - any matching feature)
         if (currentFilters.features.length > 0) {
             const hasAnyFeature = currentFilters.features.some(filterFeature => 
                 client.features?.some(clientFeature => clientFeature === filterFeature)
@@ -214,7 +196,6 @@ function applyFilters() {
             if (!hasAnyFeature) return false;
         }
         
-        // Macros filter (OR logic - any matching macro)
         if (currentFilters.macros.length > 0) {
             const hasAnyMacro = currentFilters.macros.some(filterMacro => 
                 client.macros?.some(clientMacro => clientMacro === filterMacro)
@@ -225,7 +206,6 @@ function applyFilters() {
         return true;
     });
     
-    // Sort
     filteredClients.sort((a, b) => {
         switch (currentFilters.sort) {
             case 'name':
@@ -264,18 +244,15 @@ function renderClients() {
 }
 
 function createClientCard(client) {
-    // Collect all tags from features, macros, and services
     const allTags = [
         ...(client.features || []),
         ...(client.macros || []),
         ...(client.services || [])
     ].slice(0, 5).map(tag => {
-        // Capitalize first letter
         const display = tag.charAt(0).toUpperCase() + tag.slice(1);
         return `<span class="client-tag">${display}</span>`;
     }).join('');
     
-    // Format versions and prices
     const versionTags = (client.versions || []).map(v => `<span class="client-tag version">${v}</span>`).join('');
     const priceTags = (client.prices || []).map(p => `<span class="client-tag price">${p}</span>`).join('');
     
@@ -340,7 +317,6 @@ function updateResultsCount() {
     count.textContent = `${filteredClients.length} client${filteredClients.length !== 1 ? 's' : ''} found`;
 }
 
-// Update Discord online count
 async function updateDiscordCount() {
     try {
         const response = await fetch('https://discord.com/api/guilds/1346908926855221372/widget.json');
@@ -357,7 +333,6 @@ async function updateDiscordCount() {
     }
 }
 
-// Initialize everything on page load
 async function initializePage() {
     await loadClients();
     filteredClients = [...clientsData];
@@ -366,7 +341,6 @@ async function initializePage() {
     updateDiscordCount();
 }
 
-// Wait for DOM to be ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializePage);
 } else {

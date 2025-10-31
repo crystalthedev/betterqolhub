@@ -1,5 +1,3 @@
-/* Better Shop Styles */
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -70,7 +68,6 @@
     margin-top: auto;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;

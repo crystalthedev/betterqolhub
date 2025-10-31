@@ -1,6 +1,3 @@
-// iOS 26 Inspired Interactions
-
-// Navbar scroll effect
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
 
@@ -16,7 +13,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navbarMenu = document.getElementById('navbarMenu');
 
@@ -25,7 +21,6 @@ if (mobileMenuBtn) {
         navbarMenu.classList.toggle('active');
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!mobileMenuBtn.contains(e.target) && !navbarMenu.contains(e.target)) {
             navbarMenu.classList.remove('active');
@@ -33,7 +28,6 @@ if (mobileMenuBtn) {
     });
 }
 
-// Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -48,7 +42,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all cards
 document.querySelectorAll('.ios-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
@@ -56,7 +49,6 @@ document.querySelectorAll('.ios-card').forEach(card => {
     observer.observe(card);
 });
 
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -70,7 +62,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add ripple effect to buttons
 document.querySelectorAll('.ios-button').forEach(button => {
     button.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
@@ -90,7 +81,6 @@ document.querySelectorAll('.ios-button').forEach(button => {
     });
 });
 
-// Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const hero = document.querySelector('.ios-hero');
     if (hero) {
@@ -100,7 +90,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add active class to current page in navbar
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.navbar-link').forEach(link => {
     const href = link.getAttribute('href');

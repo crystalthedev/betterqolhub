@@ -1,9 +1,5 @@
-// Better Shop Script
-
 let shopData = [];
 let currentService = null;
-
-// Fetch shop data
 async function loadShopServices() {
     try {
         const response = await fetch('../data/better-shop.json');
@@ -22,7 +18,7 @@ function displayServices() {
     
     grid.innerHTML = shopData.map(service => createServiceCard(service)).join('');
     
-    // Add click handlers for detailed services
+    
     document.querySelectorAll('.service-card[data-has-details="true"]').forEach(card => {
         card.addEventListener('click', () => {
             const serviceId = card.dataset.serviceId;
@@ -95,10 +91,8 @@ function closeServiceModal() {
     currentService = null;
 }
 
-// Initialize on page load
 loadShopServices();
 
-// Close modal on ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeServiceModal();
 });
